@@ -11,7 +11,7 @@ module.exports = async ({ getNamedAccounts, deployments }) => {
 
     log("----------------------------------------------------")
     const arguments = []
-    const web3Social = await deploy("Web3Social", {
+    const webThreeSocial = await deploy("WebThreeSocial", {
         from: deployer,
         args: arguments,
         log: true,
@@ -22,7 +22,7 @@ module.exports = async ({ getNamedAccounts, deployments }) => {
     // Verify the deployment
     if (!developmentChains.includes(network.name) && process.env.ETHERSCAN_API_KEY) {
         log("Verifying...")
-        await verify(web3Social.address, arguments)
+        await verify(webThreeSocial.address, arguments)
         log("Verified !")
     }
     log("----------------------------------------------------")

@@ -2,13 +2,13 @@
 
 pragma solidity ^0.8.7;
 
-contract web3Social {
+contract WebThreeSocial {
     address public owner;
     uint256 private counter;
 
     constructor() {
         counter = 0;
-        owner = msg.sender
+        owner = msg.sender;
     }
 
     struct post {
@@ -36,8 +36,8 @@ contract web3Social {
     }
 
     function getPost(uint256 _postId) public view returns (string memory, string memory, address) {
-        require(id < counter, "Post does not exist");
-        post storage getPost = Posts[_postId];
-        return (getPost.postTxt, getPost.postImg, getPost.sender);
+        require(_postId < counter, "Post does not exist");
+        post storage p = Posts[_postId];
+        return (p.postTxt, p.postImg, p.sender);
     }
 }
