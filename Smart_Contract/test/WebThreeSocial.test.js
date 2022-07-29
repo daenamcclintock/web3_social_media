@@ -24,5 +24,12 @@ const { developmentChains } = require("../helper-hardhat-config")
                     webThreeSocial.addPost(POST_TXT, POST_IMG)
                 ).to.be.revertedWith(error)
             })
+
+            it("emits an event and creates a post", async () => {
+                expect(await webThreeSocial.addPost(
+                    POST_TXT, POST_IMG, { value: ethers.utils.parseEther("1") })).to.emit(
+                        "postCreated"
+                )
+            })
         })
     })
