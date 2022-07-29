@@ -32,4 +32,25 @@ const { developmentChains } = require("../helper-hardhat-config")
                 )
             })
         })
+
+        describe("getPost", () => {
+            it("reverts if postId is less than counter", async () => {
+                const postId = 4
+                const counter = 5
+                const error = "Post does not exist"
+                await expect(
+                    webThreeSocial.getPost(postId)
+                ).to.be.revertedWith(error)
+            })
+
+            it("returns postTxt, postImg, and postSender", async () => {
+                const postId = 0
+                const webThreeSocialPost = await webThreeSocial.addPost(POST_TXT, POST_IMG, { value: ethers.utils.parseEther("1") })
+                const getWebThreeSocialPost = await webThreeSocial.getPost(postId)
+                
+                assert(getWebThreeSocialPost[0].toString() == POST_TXT.toString())
+                assert(getWebThreeSocialPost[1].toString() == POST_IMG.toString())
+                assert(getWebThreeSocialPost[2].toString() == deployer.address.toString())
+            })
+        })
     })
