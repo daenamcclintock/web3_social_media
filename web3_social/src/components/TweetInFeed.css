@@ -1,4 +1,4 @@
-.feedPost {
+.feedTweet {
     max-width: 100%;
     border-bottom: 1px solid rgb(63, 63, 63);
     padding: 20px;
@@ -7,11 +7,11 @@
     display: flex;
 }
 
-.feedPost:hover {
+.feedTweet:hover {
     background-color: #1c2834;
 }
 
-.completePost {
+.completeTweet {
     display: flex;
     justify-content: start;
     flex-direction: column;
@@ -54,14 +54,14 @@
     color: gray;
 }
 
-.postContent{
+.tweetContent{
     display: flex;
     justify-content: start;
     flex-direction: column;
     gap:10px;
 }
 
-.postImg {
+.tweetImg {
     width: 98%;
     border-radius: 10px;
 }
