@@ -4,6 +4,8 @@ import { Icon } from "web3uikit";
 import { Link } from "react-router-dom";
 import { useMoralis } from "react-moralis";
 import { defaultImgs } from "../defaultimgs";
+import { SiWeb3Dotjs } from "react-icons/si";
+// import { TbCurrencyEthereum } from "react-icons/tb";
 
 const Sidebar = () => {
 
@@ -15,7 +17,8 @@ const Sidebar = () => {
       <div className="siderContent">
         <div className="menu">
           <div className="details">
-            <Icon fill="#ffffff" size={33} svg="twitter" />
+            <SiWeb3Dotjs size={33} />
+            {/* <TbCurrencyEthereum size={33} /> */}
           </div>
 
           <Link to="/" className="link">

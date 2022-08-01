@@ -1,5 +1,5 @@
 import React from "react";
-import "./TweetInFeed.css";
+import "./PostInFeed.css";
 import golf from "../images/golf.png";
 import canoe from "../images/canoe.png";
 import { defaultImgs } from "../defaultimgs";
@@ -7,53 +7,53 @@ import { Icon } from "web3uikit";
 import { useMoralis } from "react-moralis";
 import { useEffect, useState } from "react";
 
-const TweetInFeed = ({ profile }) => {
-  const [tweetArr, setTweetArr] = useState();
+const PostInFeed = ({ profile }) => {
+  const [postArr, setPostArr] = useState();
   const { Moralis, account } = useMoralis();
 
   useEffect(() => {
-    async function getTweets() {
+    async function getPosts() {
       try {
-        const Tweets = Moralis.Object.extend("Tweets");
-        const query = new Moralis.Query(Tweets);
+        const Posts = Moralis.Object.extend("Posts");
+        const query = new Moralis.Query(Posts);
         if (profile) {
-          query.equalTo("tweeterAcc", account);
+          query.equalTo("posterAcc", account);
         }
         const results = await query.find();
 
-        setTweetArr(results);
+        setPostArr(results);
         console.log(results);
       } catch (error) {
         console.error(error);
       }
     }
-    getTweets();
+    getPosts();
   }, [profile]);
 
   return (
     <>
-      {tweetArr?.map((e) => {
+      {postArr?.map((e) => {
         return (
           <>
-            <div className="feedTweet">
-              <img src={e.attributes.tweeterPfp ? e.attributes.tweeterPfp : defaultImgs[0]} className="profilePic"></img>
-              <div className="completeTweet">
+            <div className="feedPost">
+              <img src={e.attributes.posterPfp ? e.attributes.posterPfp : defaultImgs[0]} className="profilePic"></img>
+              <div className="completePost">
                 <div className="who">
-                {e.attributes.tweeterUserName.slice(0, 6)}
+                {e.attributes.posterUserName.slice(0, 6)}
                   <div className="accWhen">{
-                        `${e.attributes.tweeterAcc.slice(0, 4)}...${e.attributes.tweeterAcc.slice(38)} · 
+                        `${e.attributes.posterAcc.slice(0, 4)}...${e.attributes.posterAcc.slice(38)} · 
                         ${e.attributes.createdAt.toLocaleString('en-us', { month: 'short' })}  
                         ${e.attributes.createdAt.toLocaleString('en-us', { day: 'numeric' })}
                         `  
                       }
                       </div>
                 </div>
-                <div className="tweetContent">
-                {e.attributes.tweetTxt}
-                {e.attributes.tweetImg && (
+                <div className="postContent">
+                {e.attributes.postTxt}
+                {e.attributes.postImg && (
                         <img
-                          src={e.attributes.tweetImg}
-                          className="tweetImg"
+                          src={e.attributes.postImg}
+                          className="postImg"
                         ></img>
                       )}
                 </div>
@@ -76,16 +76,16 @@ const TweetInFeed = ({ profile }) => {
       }).reverse()}
 
       {/* 
-      <div className="feedTweet">
+      <div className="feedPost">
         <img src={defaultImgs[0]} className="profilePic"></img>
-        <div className="completeTweet">
+        <div className="completePost">
           <div className="who">
             Juhizzz
             <div className="accWhen">0x42..314 · 1h</div>
           </div>
-          <div className="tweetContent">
+          <div className="postContent">
             Nice Day Golfing Today Shot 73 (+2)
-            <img src={golf} className="tweetImg"></img>
+            <img src={golf} className="postImg"></img>
           </div>
           <div className="interactions">
             <div className="interactionNums">
@@ -102,14 +102,14 @@ const TweetInFeed = ({ profile }) => {
 
         </div>
       </div>
-      <div className="feedTweet">
+      <div className="feedPost">
         <img src={defaultImgs[0]} className="profilePic"></img>
-        <div className="completeTweet">
+        <div className="completePost">
           <div className="who">
             Juhizzz
             <div className="accWhen">0x42..314 · 1h</div>
           </div>
-          <div className="tweetContent">
+          <div className="postContent">
             is simply dummy text of the printing and typesetting industry. Lorem
             Ipsum has been the industry's standard dummy text ever since the
             1500s, when an unknown printer took a galley of type and scrambled
@@ -132,14 +132,14 @@ const TweetInFeed = ({ profile }) => {
         </div>
       </div>
       
-      <div className="feedTweet">
+      <div className="feedPost">
         <img src={defaultImgs[0]} className="profilePic"></img>
-        <div className="completeTweet">
+        <div className="completePost">
           <div className="who">
             Juhizzz
             <div className="accWhen">0x42..314 · 1h</div>
           </div>
-          <div className="tweetContent">
+          <div className="postContent">
             Thoughts on the new Coca-Cola banana 🥤🍌 flavor?
           </div>
           <div className="interactions">
@@ -156,16 +156,16 @@ const TweetInFeed = ({ profile }) => {
           </div>
         </div>
       </div>
-      <div className="feedTweet">
+      <div className="feedPost">
         <img src={defaultImgs[0]} className="profilePic"></img>
-        <div className="completeTweet">
+        <div className="completePost">
           <div className="who">
             Juhizzz
             <div className="accWhen">0x42..314 · 1h</div>
           </div>
-          <div className="tweetContent">
+          <div className="postContent">
             Love spending time on the water 🌊🌅
-            <img src={canoe} className="tweetImg"></img>
+            <img src={canoe} className="postImg"></img>
           </div>
           <div className="interactions">
             <div className="interactionNums">
@@ -185,4 +185,4 @@ const TweetInFeed = ({ profile }) => {
   );
 };
 
-export default TweetInFeed;
+export default PostInFeed;

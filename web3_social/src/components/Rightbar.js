@@ -41,15 +41,15 @@ const Rightbar = () => {
     <>
     <div className="rightbarContent">
       <Input
-        label="Search Twitter"
-        name ="Search Twitter"
+        label="Search NFT Social"
+        name ="Search NFT Social"
         prefixIcon="search"
         labelBgColor="#141d26" 
         >
       </Input>
 
     <div className="trends">
-      News For You
+      News Feed
       {trends.map((e) => {
           return(
             <>
