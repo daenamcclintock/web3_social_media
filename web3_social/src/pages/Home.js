@@ -110,8 +110,8 @@ const Home = () => {
   const randomDefaultProfilePic = () => {
     let defaultProfilPicArray = defaultProfilePics
     let randomNum = Math.round(Math.random() * 10)
-    console.log(randomNum)
-    return defaultProfilePics[randomNum]
+    console.log(`Random index used for profile picture ${randomNum}`)
+    return defaultProfilPicArray[randomNum]
   }
 
   return (
