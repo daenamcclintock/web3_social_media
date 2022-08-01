@@ -14,14 +14,14 @@
     
 }
 
-.profileTweet {
+.profilePost {
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid rgb(63, 63, 63) ;
     padding: 20px;
 }
 
-.tweetBox {
+.postBox {
     width:89%;
 }
 
@@ -31,14 +31,14 @@
     height: 50px;
 }
 
-.imgOrTweet {
+.imgOrPost {
     display: flex;
     justify-content: space-between;
     width: 95%;
     align-items: center;
 }
 
-.tweet {
+.post {
     background-color: #1DA1F2;
     padding: 10px 20px;
     border-radius: 1000px;
@@ -49,11 +49,11 @@
     gap: 5px;
 }
 
-.tweet:hover {
+.post:hover {
     cursor: pointer;
 }
 
-.tweetOptions {
+.postOptions {
     display: flex;
     justify-content: end;
     gap: 10px;
@@ -68,7 +68,7 @@
     cursor:pointer;
     background-color: #282828;
 }
-.tweetImg {
+.postImg {
     width: 98%;
     border-radius: 10px;
 }
