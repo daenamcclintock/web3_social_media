@@ -6,9 +6,27 @@ import academy from "../images/academy.png";
 import youtube from "../images/youtube.png";
 import js from "../images/js.png";
 import { Input } from "web3uikit";
+const axios = require("axios");
 
 
 const Rightbar = () => {
+
+  const options = {
+    method: 'GET',
+    url: 'https://web3-news-api.p.rapidapi.com/articles/hashnode',
+    headers: {
+      'X-RapidAPI-Key': 'd7c13f0b46mshb9d78f41c6ce57bp1dd147jsncfc4510bbaca',
+      'X-RapidAPI-Host': 'web3-news-api.p.rapidapi.com'
+    }
+  };
+
+  axios.request(options).then(function (response) {
+    console.log('this is the response data', response.data);
+  })
+  .catch(function (error) {
+    console.error('this is the error', error);
+  });
+
   const trends = [
     {
       img: spaceshooter,
