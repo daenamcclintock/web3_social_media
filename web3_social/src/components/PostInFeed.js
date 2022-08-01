@@ -11,22 +11,24 @@ const PostInFeed = ({ profile }) => {
   const [postArr, setPostArr] = useState();
   const { Moralis, account } = useMoralis();
 
-  useEffect(() => {
-    async function getPosts() {
-      try {
-        const Posts = Moralis.Object.extend("Posts");
-        const query = new Moralis.Query(Posts);
-        if (profile) {
-          query.equalTo("posterAcc", account);
-        }
-        const results = await query.find();
-
-        setPostArr(results);
-        console.log(results);
-      } catch (error) {
-        console.error(error);
+  async function getPosts() {
+    try {
+      const Posts = Moralis.Object.extend("Posts");
+      const query = new Moralis.Query(Posts);
+      if (profile) {
+        query.equalTo("posterAcc", account);
       }
+      const results = await query.find();
+
+      setPostArr(results);
+      console.log(results);
+    } 
+    catch (error) {
+      console.error(error);
     }
+  }
+
+  useEffect(() => {
     getPosts();
   }, [profile]);
 
