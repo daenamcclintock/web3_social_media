@@ -8,7 +8,7 @@ import pfp2 from "../images/pfp2.png";
 import pfp3 from "../images/pfp3.png";
 import pfp4 from "../images/pfp4.png";
 import pfp5 from "../images/pfp5.png";
-import { defaultImgs } from "../defaultimgs";
+import { defaultBannerPics, defaultProfilePics } from "../defaultimgs";
 import { useMoralis, useMoralisWeb3Api } from "react-moralis";
 
 const Settings = () => {
@@ -16,7 +16,7 @@ const Settings = () => {
   const [pfps, setPfps] = useState([]);
   const [selectedPFP, setSelectedPFP] = useState();
   const inputFile = useRef(null);
-  const [selectedFile, setSelectedFile] = useState(defaultImgs[1]);
+  const [selectedFile, setSelectedFile] = useState(defaultBannerPics[0]);
   const [theFile, setTheFile] = useState();
   const [username, setUsername] = useState();
   const [bio, setBio] = useState();

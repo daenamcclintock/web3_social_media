@@ -3,7 +3,7 @@ import "./Sidebar.css";
 import { Icon } from "web3uikit";
 import { Link } from "react-router-dom";
 import { useMoralis } from "react-moralis";
-import { defaultImgs } from "../defaultimgs";
+import { defaultBannerPics, defaultProfilePics } from "../defaultimgs";
 import { SiWeb3Dotjs } from "react-icons/si";
 // import { TbCurrencyEthereum } from "react-icons/tb";
 
@@ -44,7 +44,7 @@ const Sidebar = () => {
         </div>
 
         <div className="details">
-          <img src={user.attributes.pfp ? user.attributes.pfp : defaultImgs[0]} className="profilePic"></img>
+          <img src={user.attributes.pfp ? user.attributes.pfp : defaultProfilePics[0]} className="profilePic"></img>
           <div className="profile">
             <div className="who">
               {user.attributes.username.slice(0, 6)}

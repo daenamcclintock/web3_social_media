@@ -1,6 +1,6 @@
 import React from "react";
 import "./Home.css";
-import { defaultImgs } from "../defaultimgs";
+import { defaultBannerPics, defaultProfilePics } from "../defaultimgs";
 import { TextArea, Icon } from "web3uikit";
 import { useState, useRef } from "react";
 import PostInFeed from "../components/PostInFeed";
@@ -107,12 +107,19 @@ const Home = () => {
     setSelectedFile(URL.createObjectURL(img));
   };
 
+  const randomDefaultProfilePic = () => {
+    let defaultProfilPicArray = defaultProfilePics
+    let randomNum = Math.round(Math.random() * 10)
+    console.log(randomNum)
+    return defaultProfilePics[randomNum]
+  }
+
   return (
     <>
     <div className="pageIdentify">Home</div>
       <div className="mainContent">
         <div className="profilePost">
-          <img src={user.attributes.pfp ? user.attributes.pfp : defaultImgs[0]} className="profilePic"></img>
+          <img src={user.attributes.pfp ? user.attributes.pfp : randomDefaultProfilePic()} className="profilePic"></img>
           <div className="postBox">
             <TextArea
               label=""

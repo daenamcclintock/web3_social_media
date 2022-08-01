@@ -2,7 +2,7 @@ import React from "react";
 import "./PostInFeed.css";
 import golf from "../images/golf.png";
 import canoe from "../images/canoe.png";
-import { defaultImgs } from "../defaultimgs";
+import { defaultBannerPics, defaultProfilePics } from "../defaultimgs";
 import { Icon } from "web3uikit";
 import { useMoralis } from "react-moralis";
 import { useEffect, useState } from "react";
@@ -38,7 +38,7 @@ const PostInFeed = ({ profile }) => {
         return (
           <>
             <div className="feedPost">
-              <img src={e.attributes.posterPfp ? e.attributes.posterPfp : defaultImgs[0]} className="profilePic"></img>
+              <img src={e.attributes.posterPfp ? e.attributes.posterPfp : defaultProfilePics[0]} className="profilePic"></img>
               <div className="completePost">
                 <div className="who">
                 {e.attributes.posterUserName.slice(0, 6)}
@@ -79,7 +79,7 @@ const PostInFeed = ({ profile }) => {
 
       {/* 
       <div className="feedPost">
-        <img src={defaultImgs[0]} className="profilePic"></img>
+        <img src={defaultProfilePics[0]} className="profilePic"></img>
         <div className="completePost">
           <div className="who">
             Juhizzz
@@ -105,7 +105,7 @@ const PostInFeed = ({ profile }) => {
         </div>
       </div>
       <div className="feedPost">
-        <img src={defaultImgs[0]} className="profilePic"></img>
+        <img src={defaultProfilePics[0]} className="profilePic"></img>
         <div className="completePost">
           <div className="who">
             Juhizzz
@@ -135,7 +135,7 @@ const PostInFeed = ({ profile }) => {
       </div>
       
       <div className="feedPost">
-        <img src={defaultImgs[0]} className="profilePic"></img>
+        <img src={defaultProfilePics[0]} className="profilePic"></img>
         <div className="completePost">
           <div className="who">
             Juhizzz
@@ -159,7 +159,7 @@ const PostInFeed = ({ profile }) => {
         </div>
       </div>
       <div className="feedPost">
-        <img src={defaultImgs[0]} className="profilePic"></img>
+        <img src={defaultProfilePics[0]} className="profilePic"></img>
         <div className="completePost">
           <div className="who">
             Juhizzz

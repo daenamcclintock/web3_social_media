@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import './Profile.css';
-import { defaultImgs } from "../defaultimgs";
+import { defaultBannerPics, defaultProfilePics } from "../defaultimgs";
 import PostInFeed from "../components/PostInFeed";
 import { useMoralis } from "react-moralis";
 
@@ -13,9 +13,9 @@ const Profile = () => {
   return (
     <>
     <div className="pageIdentify">Profile</div>
-    <img className="profileBanner" src={user.attributes.banner ? user.attributes.banner : defaultImgs[1]}></img>
+    <img className="profileBanner" src={user.attributes.banner ? user.attributes.banner : defaultBannerPics[0]}></img>
     <div className="pfpContainer">
-      <img className="profilePFP" src={user.attributes.pfp ? user.attributes.pfp : defaultImgs[0]}></img>
+      <img className="profilePFP" src={user.attributes.pfp ? user.attributes.pfp : defaultProfilePics[0]}></img>
       <div className="profileName">{user.attributes.username.slice(0, 6)}</div>
       <div className="profileWallet">{`${user.attributes.ethAddress.slice(0, 4)}...
             ${user.attributes.ethAddress.slice(38)}`}</div>

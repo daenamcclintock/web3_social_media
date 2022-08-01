@@ -1,4 +1,4 @@
-export const defaultImgs = [
+export const defaultProfilePics = [
   "https://ipfs.io/ipfs/QmNTZTtgEyteXejgLMq5M1HphsfWtLnx77cyVBXHVku14X",
   "https://ipfs.io/ipfs/QmNfCVbHs1ZfdH3zhhuPwxX6kdFhQ2uxVZrdA5WMRybkhb",
   "https://ipfs.io/ipfs/QmNU53FeLzyR3BP8Ww4QkihcEb1P6E9pDrHPQ3oiJDFPq6",
@@ -9,4 +9,8 @@ export const defaultImgs = [
   "https://ipfs.io/ipfs/QmNrRwWtnJx845VqxDRAAQSwEf7gbYG5Tyot2zk32oSJ9j",
   "https://ipfs.io/ipfs/QmNw2PiPHpQcUzb9B8CfTKHhfHJmNtW2GNsVdTs94Mk2xF",
   "https://ipfs.io/ipfs/QmP2qTLaVbN4J7nTJtSQpwoLx98uEZHgbu2aG8gGaArY54"
+]
+
+export const defaultBannerPics = [
+  "https://ipfs.moralis.io:2053/ipfs/QmNgA9MNWFfRaoKzBt21VghQopnKXBgVxzyGvv5qjsV4Vw/media/2"
 ]
