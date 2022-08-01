@@ -11,7 +11,7 @@ const { network } = require("hardhat")
 module.exports = async () => {
     if (process.env.UPDATE_FRONT_END) {
         console.log("Writing to front end...")
-        await updateContractAddresses()
+        // await updateContractAddresses()
         await updateAbi()
         console.log("Front end written!")
     }
