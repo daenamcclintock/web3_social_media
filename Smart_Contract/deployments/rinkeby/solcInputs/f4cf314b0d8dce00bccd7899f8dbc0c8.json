@@ -1,0 +1,35 @@
+{
+  "language": "Solidity",
+  "sources": {
+    "contracts/WebThreeSocial.sol": {
+      "content": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.7;\n\ncontract WebThreeSocial {\n    address public owner;\n    uint256 private counter;\n\n    // Function runs once when the contract is deployed\n    constructor() {\n        counter = 0;\n        owner = msg.sender;\n    }\n\n    // Data structure of each post\n    struct post {\n        address sender;\n        uint256 id;\n        string postTxt;\n        string postImg;\n    }\n\n    // Event to fire when a post is created and update frontend\n    event postCreated (address sender, uint256 id, string postTxt, string postImg);\n\n    // Mapping counter(postId) to each post\n    mapping(uint256 => post) Posts;\n\n    // Function to add a new post and write the information to the blockchain\n    function addPost (string memory _postTxt, string memory _postImg) public payable {\n        require(msg.value == (1 ether), \"Please submit 1 ether\"); // sender should send 1 ETH along with each post\n        post storage newPost = Posts[counter];\n        newPost.sender = msg.sender;\n        newPost.id = counter;\n        newPost.postTxt = _postTxt;\n        newPost.postImg = _postImg;\n        emit postCreated (msg.sender, counter, _postTxt, _postImg);\n        counter++;\n\n        payable(owner).transfer(msg.value);\n    }\n\n    // Function to get the post by the postId\n    function getPost(uint256 _postId) public view returns (string memory, string memory, address) {\n        require(_postId < counter, \"Post does not exist\"); // Check to make sure that the postId exists\n        post storage p = Posts[_postId];\n        return (p.postTxt, p.postImg, p.sender);\n    }\n}"
+    }
+  },
+  "settings": {
+    "optimizer": {
+      "enabled": false,
+      "runs": 200
+    },
+    "outputSelection": {
+      "*": {
+        "*": [
+          "abi",
+          "evm.bytecode",
+          "evm.deployedBytecode",
+          "evm.methodIdentifiers",
+          "metadata",
+          "devdoc",
+          "userdoc",
+          "storageLayout",
+          "evm.gasEstimates"
+        ],
+        "": [
+          "ast"
+        ]
+      }
+    },
+    "metadata": {
+      "useLiteralContent": true
+    }
+  }
+}
