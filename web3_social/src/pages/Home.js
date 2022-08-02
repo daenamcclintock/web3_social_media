@@ -116,7 +116,7 @@ const Home = () => {
 
   return (
     <>
-    <div className="pageIdentify">What's new in web3?</div>
+    <div className="pageIdentify">Post about Web3!</div>
       <div className="mainContent">
         <div className="profilePost">
           <img src={user.attributes.pfp ? user.attributes.pfp : randomDefaultProfilePic()} className="profilePic"></img>
@@ -124,7 +124,8 @@ const Home = () => {
             <TextArea
               label=""
               name="postTxtArea"
-              value="GM World"
+              value="What's new in Web3?"
+              placeholder="What's new in Web3?"
               type="text"
               onChange={(e) => setPost(e.target.value)}
               width="95%"
