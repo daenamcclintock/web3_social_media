@@ -3,7 +3,7 @@ import './Rightbar.css';
 import vitalik from "../images/vitalik.png"
 import spacebar from "../images/spacebar.png"
 import messari from "../images/messari.png"
-import web3 from "../images/web3.png"
+import uniswap from "../images/uniswap.png"
 import socios from "../images/socios.png"
 import { Input } from "web3uikit";
 const axios = require("axios");
@@ -61,9 +61,9 @@ const Rightbar = () => {
       link: "https://www.coindesk.com/business/2022/08/02/crypto-intelligence-firm-messari-acquires-web3s-version-of-crunchbase/",
     },
     {
-      img: web3,
-      text: "What is web3, and why are people talking about it?",
-      link: "https://www.bostonglobe.com/2022/08/01/business/what-is-web3-why-are-people-talking-about-it/",
+      img: uniswap,
+      text: "More than $4.7M stolen in Uniswap fake token phishing attack",
+      link: "https://cointelegraph.com/news/more-than-4-7m-stolen-in-uniswap-fake-token-phishing-attack",
     },
     {
       img: socios,
