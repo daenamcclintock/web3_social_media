@@ -3150,6 +3150,18 @@
     "@web3auth/wallet-connect-v1-adapter" "^0.3.1"
     loglevel "^1.8.0"
 
+"@web3uikit/config@*":
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/@web3uikit/config/-/config-0.1.2.tgz#0f61701c094ce40269c59e61cb19d8326dba76ec"
+  integrity sha512-fOY0jxen7nEfivZc7BKm63WRcNEncidFhk+dIVR/0bj4tt5Xl0xyomPgyQqe38d3/PJ3RvqVTdupWFbWNJULkA==
+
+"@web3uikit/icons@^0.1.4":
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/@web3uikit/icons/-/icons-0.1.4.tgz#8cc60307808f7172ea53099a25d58d22867932b4"
+  integrity sha512-XgGzx935yN4aGMstFi+UOSqe+IEPQ64pDiwatq/gd6gKtKV1M0mJ7FTdsOQZADJ/WOWh3cmzRg+yy8r/nvmKUw==
+  dependencies:
+    "@web3uikit/config" "*"
+
 "@webassemblyjs/ast@1.9.0":
   version "1.9.0"
   resolved "https://registry.yarnpkg.com/@webassemblyjs/ast/-/ast-1.9.0.tgz#bd850604b4042459a5a41cd7d338cbed695ed964"

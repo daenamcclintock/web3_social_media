@@ -32,7 +32,7 @@ const Home = () => {
     }
 
     let options = {
-      contractAddress: "0x8E452D8573e2B1e8341D3f4aCC07939247cf99c6",
+      contractAddress: "0xD3b5F4da079EcCa9ec42198db284d246cbb0c0A3",
       functionName: "addPost",
       abi: [{
         "inputs": [
@@ -116,7 +116,7 @@ const Home = () => {
 
   return (
     <>
-    <div className="pageIdentify">Home</div>
+    <div className="pageIdentify">What's new in web3?</div>
       <div className="mainContent">
         <div className="profilePost">
           <img src={user.attributes.pfp ? user.attributes.pfp : randomDefaultProfilePic()} className="profilePic"></img>

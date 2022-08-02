@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { useMoralis } from "react-moralis";
 import { defaultBannerPics, defaultProfilePics } from "../defaultimgs";
 import { SiWeb3Dotjs } from "react-icons/si";
-// import { TbCurrencyEthereum } from "react-icons/tb";
+import {Web3Api} from '@web3uikit/icons'
 
 const Sidebar = () => {
 
@@ -17,8 +17,9 @@ const Sidebar = () => {
       <div className="siderContent">
         <div className="menu">
           <div className="details">
-            <SiWeb3Dotjs size={33} />
-            {/* <TbCurrencyEthereum size={33} /> */}
+            <h2>Web</h2>
+          <Web3Api fill="#ffffff" fontSize={40} />
+          <h2>Social</h2>
           </div>
 
           <Link to="/" className="link">

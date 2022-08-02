@@ -6,10 +6,13 @@ import { defaultBannerPics, defaultProfilePics } from "../defaultimgs";
 import { Icon } from "web3uikit";
 import { useMoralis } from "react-moralis";
 import { useEffect, useState } from "react";
+import { BiLike } from "react-icons/bi";
 
 const PostInFeed = ({ profile }) => {
   const [postArr, setPostArr] = useState();
   const { Moralis, account } = useMoralis();
+
+  console.log(Icon)
 
   async function getPosts() {
     try {
@@ -64,7 +67,7 @@ const PostInFeed = ({ profile }) => {
                     <Icon fill="#3f3f3f" size={20} svg="messageCircle" />
                   </div>
                   <div className="interactionNums">
-                    <Icon fill="#3f3f3f" size={20} svg="star" />
+                    <BiLike fill="#3f3f3f" size={20} />
                     12
                   </div>
                   <div className="interactionNums">

@@ -104,8 +104,8 @@ const Rightbar = () => {
     <>
     <div className="rightbarContent">
       <Input
-        label="Search NFT Social"
-        name ="Search NFT Social"
+        label="Search Web3 Social"
+        name ="Search Web3 Social"
         prefixIcon="search"
         labelBgColor="#141d26" 
         >
