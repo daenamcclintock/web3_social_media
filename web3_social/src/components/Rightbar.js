@@ -1,104 +1,104 @@
 import React from "react";
 import './Rightbar.css';
-import spaceshooter from "../images/spaceshooter.jpeg";
-import netflix from "../images/netflix.jpeg";
-import academy from "../images/academy.png";
-import youtube from "../images/youtube.png";
-import js from "../images/js.png";
+import vitalik from "../images/vitalik.png"
+import spacebar from "../images/spacebar.png"
+import messari from "../images/messari.png"
+import web3 from "../images/web3.png"
+import socios from "../images/socios.png"
 import { Input } from "web3uikit";
 const axios = require("axios");
 
 
 const Rightbar = () => {
 
-  const options = {
-    method: 'GET',
-    url: 'https://web3-news-api.p.rapidapi.com/articles/hashnode',
-    headers: {
-      'X-RapidAPI-Key': 'd7c13f0b46mshb9d78f41c6ce57bp1dd147jsncfc4510bbaca',
-      'X-RapidAPI-Host': 'web3-news-api.p.rapidapi.com'
-    }
-  };
-  
-  let newsStoriesArr = []
-  const getNewsStories = () => {
-    axios.request(options)
-      .then(function (response) {
-        console.log('this is the response data', response.data);
-        for (let i = 0; i < response.data.length; i++) {
-          if (response.data[i].title.split(" ").length > 3 && !response.data[i].title.includes("img")) {
-            newsStoriesArr.push(response.data[i])
-          }
-          else {
-            console.log("No News Stories")
-          }
-        }
-      })
-      .then(() => {
-        console.log('These are the news stories:', newsStoriesArr)
-      })
-      .catch(function (error) {
-        console.error('this is the error', error);
-      })
-  }
+  // const options = {
+  //   method: 'GET',
+  //   url: 'https://web3-news-api.p.rapidapi.com/articles/hashnode',
+  //   headers: {
+  //     'X-RapidAPI-Key': 'd7c13f0b46mshb9d78f41c6ce57bp1dd147jsncfc4510bbaca',
+  //     'X-RapidAPI-Host': 'web3-news-api.p.rapidapi.com'
+  //   }
+  // };
 
-  getNewsStories()
+  // let newsStoriesArr = []
+  // const getNewsStories = () => {
+  //   axios.request(options)
+  //     .then(function (response) {
+  //       console.log('this is the response data', response.data);
+  //       for (let i = 0; i < response.data.length; i++) {
+  //         if (response.data[i].title.split(" ").length > 3 && !response.data[i].title.includes("img")) {
+  //           newsStoriesArr.push(response.data[i])
+  //         }
+  //         else {
+  //           console.log("No News Stories")
+  //         }
+  //       }
+  //     })
+  //     .then(() => {
+  //       console.log('These are the news stories:', newsStoriesArr)
+  //     })
+  //     .catch(function (error) {
+  //       console.error('this is the error', error);
+  //     })
+  // }
 
-  // const trends = [
-  //   {
-  //     img: spaceshooter,
-  //     text: "Learn how to build a Web3 FPS game using unity...",
-  //     link: "https://moralis.io/moralis-projects-learn-to-build-a-web3-space-fps-game/",
-  //   },
-  //   {
-  //     img: netflix,
-  //     text: "The first Moralis Project! Let's Netflix and chill...",
-  //     link: "https://moralis.io/moralis-projects-learn-to-build-a-web3-netflix-clone/",
-  //   },
-  //   {
-  //     img: academy,
-  //     text: "Master DeFi in 2022. Start  at the Moralis Academy...",
-  //     link: "https://academy.moralis.io/courses/defi-101",
-  //   },
-  //   {
-  //     img: js,
-  //     text: "Become a Web3 Developer with just simple JS...",
-  //     link: "https://academy.moralis.io/all-courses",
-  //   },
-  //   {
-  //     img: youtube,
-  //     text: "Best youtube channel to learn about Web3...",
-  //     link: "https://www.youtube.com/channel/UCgWS9Q3P5AxCWyQLT2kQhBw",
-  //   },
-  // ];
+  // getNewsStories()
 
   const trends = [
     {
-      img: "",
-      text: newsStoriesArr[0].title.toString(),
-      link: newsStoriesArr[0].url.toString(),
+      img: vitalik,
+      text: "Ethereum creator dumps cold water on Zuckerberg’s Web3 dreams",
+      link: "https://fortune.com/2022/08/01/ethereum-vitalik-buterin-dumps-cold-water-on-mark-zuckerberg-web3-metaverse-dreams/",
     },
     {
-      img: "",
-      text: newsStoriesArr[1].title.toString(),
-      link: newsStoriesArr[1].url.toString(),
+      img: spacebar,
+      text: "AO Labs raises $4.5M for its Spacebar community-driven Web3 gaming platform",
+      link: "https://venturebeat.com/2022/08/02/ao-labs-has-raised-4-5m-for-its-spacebar-community-driven-web3-gaming-platform/",
     },
     {
-      img: "",
-      text: newsStoriesArr[2].title.toString(),
-      link: newsStoriesArr[2].url.toString(),
+      img: messari,
+      text: "Crypto Intelligence Firm Messari Acquires Web3’s Version of Crunchbase",
+      link: "https://www.coindesk.com/business/2022/08/02/crypto-intelligence-firm-messari-acquires-web3s-version-of-crunchbase/",
     },
     {
-      img: "",
-      text: newsStoriesArr[3].title.toString(),
-      link: newsStoriesArr[3].url.toString(),
+      img: web3,
+      text: "What is web3, and why are people talking about it?",
+      link: "https://www.bostonglobe.com/2022/08/01/business/what-is-web3-why-are-people-talking-about-it/",
     },
     {
-      img: "",
-      text: newsStoriesArr[4].title.toString(),
-      link: newsStoriesArr[4].url.toString(),
+      img: socios,
+      text: "Socios Invests $100M To Accelerate FC Barcelona’s Web3 Strategy",
+      link: "https://watcher.guru/news/socios-invests-100m-to-accelerate-fc-barcelonas-web3-strategy",
     },
-  ]
+  ];
+
+  // const trends = [
+  //   {
+  //     img: "",
+  //     text: newsStoriesArr[0].title.toString(),
+  //     link: newsStoriesArr[0].url.toString(),
+  //   },
+  //   {
+  //     img: "",
+  //     text: newsStoriesArr[1].title.toString(),
+  //     link: newsStoriesArr[1].url.toString(),
+  //   },
+  //   {
+  //     img: "",
+  //     text: newsStoriesArr[2].title.toString(),
+  //     link: newsStoriesArr[2].url.toString(),
+  //   },
+  //   {
+  //     img: "",
+  //     text: newsStoriesArr[3].title.toString(),
+  //     link: newsStoriesArr[3].url.toString(),
+  //   },
+  //   {
+  //     img: "",
+  //     text: newsStoriesArr[4].title.toString(),
+  //     link: newsStoriesArr[4].url.toString(),
+  //   },
+  // ]
 
   return (
     <>
