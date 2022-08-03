@@ -1,2 +1,0 @@
-(this["webpackJsonpweb3-social-media"]=this["webpackJsonpweb3-social-media"]||[]).push([[10],{1328:function(n,i){},1329:function(n,i){},1380:function(n,i){},1384:function(n,i){},1386:function(n,i){},1388:function(n,i){}}]);
-//# sourceMappingURL=10.6fe4d02e.chunk.js.map

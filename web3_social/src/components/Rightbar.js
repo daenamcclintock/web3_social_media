@@ -5,6 +5,7 @@ import messari from "../images/messari.png"
 import uniswap from "../images/uniswap.png"
 import socios from "../images/socios.png"
 import spacebar from "../images/spacebar.png"
+import solana from "../images/solana.png"
 import { Input } from "web3uikit";
 const axios = require("axios");
 
@@ -45,6 +46,11 @@ const Rightbar = () => {
   // getNewsStories()
 
   const trends = [
+    {
+      img: solana,
+      text: "The Solana wallet hack: What we know so far",
+      link: "https://fortune.com/2022/08/03/the-solana-wallet-hack-what-we-know-so-far/",
+    },
     {
       img: vitalik,
       text: "Ethereum creator dumps cold water on Zuckerberg’s Web3 dreams",
