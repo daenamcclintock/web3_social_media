@@ -1,4 +1,4 @@
-.siderContent{
+.siderContent {
     padding-top: 20px;
     padding-right: 90px;
     justify-content: space-between;
@@ -31,12 +31,12 @@
     text-decoration: none !important;
 }
 
-.menuItems:hover{
+.menuItems:hover {
     cursor:pointer;
     background-color: #282828;
 }
 
-.profile{
+.profile {
     display: flex;
     flex-direction: column;
     gap: 5px;

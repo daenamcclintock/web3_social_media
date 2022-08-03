@@ -4,7 +4,6 @@ import { Icon } from "web3uikit";
 import { Link } from "react-router-dom";
 import { useMoralis } from "react-moralis";
 import { defaultBannerPics, defaultProfilePics } from "../defaultimgs";
-import { SiWeb3Dotjs } from "react-icons/si";
 import {Web3Api} from '@web3uikit/icons'
 
 const Sidebar = () => {
@@ -18,8 +17,8 @@ const Sidebar = () => {
         <div className="menu">
           <div className="details">
             <h2>Web</h2>
-          <Web3Api fill="#ffffff" fontSize={40} />
-          <h2>Social</h2>
+            <Web3Api fill="#ffffff" fontSize={40} />
+            <h2>Social</h2>
           </div>
 
           <Link to="/" className="link">

@@ -8,6 +8,7 @@ import Rightbar from "./components/Rightbar";
 import "./App.css";
 import { useMoralis } from "react-moralis";
 import { ConnectButton, Icon } from "web3uikit";
+import {Web3Api} from '@web3uikit/icons'
 
 const App = () => {
   const { isAuthenticated, Moralis } = useMoralis();
@@ -42,7 +43,11 @@ const App = () => {
       </div>
       ) : (
         <div className="loginPage">
-          <Icon fill="#ffffff" size={40} svg="twitter" />
+          <div className="logo">
+            <h2>Web</h2>
+              <Web3Api fill="#ffffff" fontSize={40} />
+            <h2>Social</h2>
+          </div>
           <ConnectButton />
         </div>
 

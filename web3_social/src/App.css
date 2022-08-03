@@ -76,3 +76,8 @@ a:-webkit-any-link {
   flex-direction: column;
   gap: 20px;
 }
+
+.logo {
+  display: flex;
+  color: #ffffff;
+}
