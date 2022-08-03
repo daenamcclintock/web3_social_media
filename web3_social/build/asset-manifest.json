@@ -9,8 +9,8 @@
     "static/js/3.6ac160b4.chunk.js": "/static/js/3.6ac160b4.chunk.js",
     "static/js/3.6ac160b4.chunk.js.map": "/static/js/3.6ac160b4.chunk.js.map",
     "main.css": "/static/css/main.20947572.chunk.css",
-    "main.js": "/static/js/main.6810e7f1.chunk.js",
-    "main.js.map": "/static/js/main.6810e7f1.chunk.js.map",
+    "main.js": "/static/js/main.b3d24883.chunk.js",
+    "main.js.map": "/static/js/main.b3d24883.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.8bdc6b10.js",
     "runtime-main.js.map": "/static/js/runtime-main.8bdc6b10.js.map",
     "static/js/6.18551c2b.chunk.js": "/static/js/6.18551c2b.chunk.js",
@@ -54,6 +54,7 @@
     "static/media/pfp4.b4e70662.png": "/static/media/pfp4.b4e70662.png",
     "static/media/pfp5.ba3d30f6.png": "/static/media/pfp5.ba3d30f6.png",
     "static/media/socios.5b438abb.png": "/static/media/socios.5b438abb.png",
+    "static/media/solana.44745c16.png": "/static/media/solana.44745c16.png",
     "static/media/spacebar.a0c8c391.png": "/static/media/spacebar.a0c8c391.png",
     "static/media/uniswap.b82afad6.png": "/static/media/uniswap.b82afad6.png",
     "static/media/vitalik.cb452e8c.png": "/static/media/vitalik.cb452e8c.png"
@@ -62,6 +63,6 @@
     "static/js/runtime-main.8bdc6b10.js",
     "static/js/6.18551c2b.chunk.js",
     "static/css/main.20947572.chunk.css",
-    "static/js/main.6810e7f1.chunk.js"
+    "static/js/main.b3d24883.chunk.js"
   ]
 }
